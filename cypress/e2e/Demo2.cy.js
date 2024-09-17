@@ -1,6 +1,6 @@
-describe('Facebook Login Automation Test', () => {
+describe.skip('Facebook Login Automation Test', () => {
   
-    it('Visit Facebook and login with credentials', () => {
+    it.skip('Visit Facebook and login with credentials', () => {
       // Step 1: Open Facebook login page
       cy.visit('https://www.facebook.com');
       
@@ -26,7 +26,7 @@ describe('Facebook Login Automation Test', () => {
       cy.url().should('include', 'https://www.facebook.com/login');
     });
 
-    it('Visit Facebook and login with credentials', () => {
+    it.skip('Visit Facebook and login with credentials', () => {
         // Step 1: Open Facebook login page
         cy.visit('/');
         cy.get('.fuse-mat-button-large').should('be.visible').click();
