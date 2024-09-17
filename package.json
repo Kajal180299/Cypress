@@ -1,0 +1,19 @@
+{
+  "name": "cypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress:run:dev": "cypress run --env configFile=development --browser $BROWSER --$MODE",
+    "cypress:run:qa": "cypress run --env configFile=qa --browser $BROWSER --$MODE",
+    "cypress:run:uat": "cypress run --env configFile=uat --browser $BROWSER --$MODE"
+
+
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.14.2"
+  }
+}
