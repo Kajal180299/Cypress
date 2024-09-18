@@ -7,6 +7,7 @@ Things to add:
     6. FAKERS
 5. How to store sensitive data for testing! API or UI
 6. Parallel Testing!!
+7. API Testing!!! [Migrate Postman test to Cypress test]
 
 --------------------------------------------------------------------------
 JS![Elgoute JS]
