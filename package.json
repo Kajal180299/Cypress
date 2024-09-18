@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "cypress:run:dev": "cross-env cypress run --env configFile=development --browser %BROWSER% --%MODE%",
     "cypress:run:qa": "cross-env cypress run --env configFile=qa --browser $BROWSER --$MODE",
-    "cypress:run:uat": "cross-env cypress run --env configFile=uat --browser $BROWSER --$MODE"
+    "cypress:run:uat": "cross-env cypress run --env configFile=uat --browser $BROWSER --$MODE",
+    "cypress:run:local": "cross-env cypress run --env configFile=uat --browser chrome --headed",
+    "cypress:open": "cypress open --env configFile=development"
   },
   "author": "",
   "license": "ISC",
@@ -18,5 +20,8 @@
     "mochawesome": "^7.1.3",
     "mochawesome-merge": "^4.3.0",
     "mochawesome-report-generator": "^6.2.0"
+  },
+  "dependencies": {
+    "cypress-plugin-api": "^2.11.2"
   }
 }
