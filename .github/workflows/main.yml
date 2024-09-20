@@ -1,0 +1,41 @@
+name: Run Cypress Tests
+
+on:
+  push:
+    branches:
+      - kajal
+  pull_request:
+    branches:
+      - kajal
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Set up Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'  # You can change the Node.js version if required
+
+      # Install dependencies (Cypress and others)
+      - name: Install dependencies
+        run: npm ci  # Use npm ci for clean installation of dependencies
+
+         # Run Cypress tests in headless mode using Electron
+      - name: Run Cypress tests (Electron Headless)
+        run: npx cypress run
+        env:
+          CYPRESS_CACHE_FOLDER: ~/.cache/Cypress
+
+      # Upload Cypress test results (Optional)
+      - name: Upload test results
+        uses: actions/upload-artifact@v3
+        with:
+          name: cypress-results
+          path: cypress/reports/
