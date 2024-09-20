@@ -40,10 +40,10 @@ jobs:
           name: cypress-results
           path: cypress/reports/
 
-       # Upload Cypress reports
+       # Upload Cypress video
       - name: Upload test results
         uses: actions/upload-artifact@v3
         with:
-          name: cypress-results
-          path: cypress/reports/
+          name: cypress-video
+          path: cypress/videos/
 
