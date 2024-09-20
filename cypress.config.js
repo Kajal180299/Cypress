@@ -1,5 +1,5 @@
 const { defineConfig } = require("cypress");
-const allureWriter = require('@shelex/cypress-allure-plugin/writer');
+// const allureWriter = require('@shelex/cypress-allure-plugin/writer');
 
 const fs = require('fs-extra'); const path = require('path'); // Function to get the right environment config file
  function getConfigurationByFile(file) 
@@ -12,7 +12,7 @@ module.exports = defineConfig({
 
     baseUrl: 'http://phoenix.techwithjatin.com',
     setupNodeEvents(on, config) {
-      allureWriter(on, config);
+     // allureWriter(on, config);
 
       const file = config.env.configFile || 'development'; // Default to development 
       return getConfigurationByFile(file);

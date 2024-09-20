@@ -17,3 +17,5 @@ describe
 Mocha  Reporter!!
 Junit! -> jenkins
 
+we can create only json file in fixtures
+
