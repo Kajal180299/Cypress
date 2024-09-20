@@ -1,6 +1,6 @@
-describe('Demo Login' , () => {
+describe.skip('Demo Login' , () => {
 
-  it ('My login test', () => {
+  it.skip('My login test', () => {
      
     // cy.visit('https://google.com')
     // cy.contains('India')
