@@ -3,10 +3,10 @@ name: Run Cypress Tests
 on:
   push:
     branches:
-      - kajal
+      - main
   pull_request:
     branches:
-      - kajal
+      - main
 
 jobs:
   cypress-run:
